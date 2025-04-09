@@ -9,10 +9,7 @@
     
     <body>
         <header>
-            <div class="header-info1">
-                <p id="current-time"></p>
-            </div>
-            <div class="header-info2">
+            <div class="header-info">
                 <h1>Shinchan - Homepage</h1>
             </div>
             
@@ -144,20 +141,5 @@
             <p>&copy; 2025 Programming4</p>
             <p>Get in touch with us: <a href="mailto:shinchan-lovers@justlearninghtml.com">shinchan-lovers@justlearninghtml.com</a></p>
         </footer>
-
-        <script>
-            function showTime() {
-                var now = new Date();
-                var hours = now.getHours();
-                var minutes = now.getMinutes();
-                var seconds = now.getSeconds();
-                var time = (hours < 10 ? "0" + hours : hours) + ":" +
-                    (minutes < 10 ? "0" + minutes : minutes) + ":" +
-                    (seconds < 10 ? "0" + seconds : seconds);
-                document.getElementById('current-time').textContent = time;
-            }
-            setInterval(showTime, 1000);
-            showTime();
-        </script>
     </body>
 </html>

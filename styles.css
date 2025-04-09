@@ -12,19 +12,10 @@ header {
     text-align: center;
 }
 
-.header-info1 {
-    display: block;
-    text-align: left;
-}
-
-.header-info2 {
+.header-info {
     display: block;
     text-align:center;
-}
-
-#current-time {
-    font-size: 1.2em;
-    font-weight: bold;
+    padding: 20px;
 }
 
 header h1 {
