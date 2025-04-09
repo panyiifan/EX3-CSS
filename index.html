@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shinchan - Homepage</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    
+    <body>
+        <header>
+            <div class="header-info1">
+                <p id="current-time"></p>
+            </div>
+            <div class="header-info2">
+                <h1>Shinchan - Homepage</h1>
+            </div>
+            
+            <table class="header-table">
+                <tr>
+                    <th class="image-cell1">
+                        <img src="assets/shin-chan-banner.jpg" alt="Shinchan Logo 1" class="header-image">
+                    </th>
+                    <th class="image-cell2">
+                        <img src="assets/naughtiest-son.jpg" alt="Shinchan Logo 2" class="header-image">
+                    </th>
+                </tr>
+            </table>
+        </header>
+
+        <nav>
+            <a href="#videos">Shinchan: Shiro and the Coal Town Game</a>
+            <a href="#gallery">Characters</a>
+            <a href="#contact">Who's your favourite?</a>
+        </nav>
+        
+        <div class="container">
+            <section class="main-content" id="videos">
+                <h2>Shinchan: Shiro and the Coal Town</h2>
+                <p>(Available on: Nintendo Switch and Windows PC)</p>
+                <div class="video-container">
+                    <video controls>
+                        <source src="assets/shinchan-and-the-coal-town.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <section class="main-content" id="gallery">
+                <h2>The Characters</h2>
+                <table class="characters-table">
+                    <th>
+                        <tr>
+                            <td>
+                                <h3>Shinnosuke Nohara (Shinchan)</h3>
+                                <img src="assets/character-shinchan.png" alt="Shinnosuke Nohara" class="character-image">
+                                <p>The mischievous 5-year-old protagonist known for his hilarious antics and love of choco chips.</p>
+                            </td>
+                            
+                            <td>
+                                <h3>Misae Nohara (Mom)</h3>
+                                <img src="assets/character-misae.webp" alt="Misae Nohara" class="character-image">
+                                <p>Shinchan's short-tempered but loving mother, always trying to keep him in line.</p>
+                            </td>
+
+                            <td>
+                                <h3>Hiroshi Nohara (Dad)</h3>
+                                <img src="assets/character-hiroshi.webp" alt="Hiroshi Nohara" class="character-image">
+                                <p>The laid-back father who works at a company and enjoys his evening beer.</p>
+                            </td>
+                        </tr>
+                    </th>
+        
+                        <tr>
+                            <td>
+                                <h3>Himawari (Sister)</h3>
+                                <img src="assets/character-himawari.png" alt="Himawari" class="character-image">
+                                <p>The youngest of the Noharas. Loves shiny objects and brand name goods. Smiles sideways, like Shinchan.</p>
+                            </td>
+
+                            <td>
+                                <h3>Yukino Nohara (Shiro)</h3>
+                                <img src="assets/character-shiro.png" alt="Yukino Nohara" class="character-image">
+                                <p>The family dog — small, fluffy, and sometimes the most sensible member of the household.</p>
+                            </td>
+
+                            <td>
+                                <h3>Toru Kazama</h3>
+                                <img src="assets/character-toru-kazama.webp" alt="Toru Kazama" class="character-image">
+                                <p>The smart and responsible friend of Shinchan, often the voice of reason in the group.</p>
+                            </td>
+                        </tr>
+                </table>
+            </section>
+
+            <section class="main-content" id="content">
+                <h2 id="favorite">Who's your favorite?</h2>
+                <form action="submit_form.php" method="post">
+                    <label for="favorite-character">Who's your favorite character?</label>
+                    <select id="favorite-character" name="favorite-character">
+                        <option value="Shinchan">Shinchan</option>
+                        <option value="Misae">Misae</option>
+                        <option value="Hiroshi">Hiroshi</option>
+                        <option value="Himawari">Himawari</option>
+                        <option value="Shiro">Shiro</option>
+                        <option value="Toru">Toru</option>
+                    </select>
+                <br><br>
+    
+                <h4>Character not in the list? Write their name below:</h4>
+                <label for="other-character">Your other favourite character: </label>
+                <input type="text" id="other-character" name="other-character" placeholder="Enter character name">
+                <br><br>
+    
+                <label for="reasons">Why do you like this character?</label>
+                <textarea id="reasons" name="reasons" rows="4" placeholder="State your reasons in a couple of lines..."></textarea>
+                <br><br>
+    
+                <h3>Tell us a bit more about yourself</h3>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+                <br><br>
+    
+                <label>Your Gender:</label>
+                <input type="radio" name="gender" value="male"> Male&nbsp&nbsp
+                <input type="radio" name="gender" value="female"> Female
+                <br><br>
+    
+                <label for="dob">Your Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+                <br><br>
+    
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <br><br>
+    
+                <input type="submit" value="Submit">
+                <br><br><br><br><br><br><br><br><br>
+                </form>
+            </section>
+        </div>
+    
+        <footer>
+            <p>&copy; 2025 Programming4</p>
+            <p>Get in touch with us: <a href="mailto:shinchan-lovers@justlearninghtml.com">shinchan-lovers@justlearninghtml.com</a></p>
+        </footer>
+
+        <script>
+            function showTime() {
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+                var time = (hours < 10 ? "0" + hours : hours) + ":" +
+                    (minutes < 10 ? "0" + minutes : minutes) + ":" +
+                    (seconds < 10 ? "0" + seconds : seconds);
+                document.getElementById('current-time').textContent = time;
+            }
+            setInterval(showTime, 1000);
+            showTime();
+        </script>
+    </body>
+</html>
